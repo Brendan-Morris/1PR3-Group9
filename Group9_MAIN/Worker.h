@@ -26,4 +26,6 @@ public:
 	void SetHourlyPay(double HP) { m_HourlyPay = HP; };
 
 	void virtual Display();
+	
 };
+
