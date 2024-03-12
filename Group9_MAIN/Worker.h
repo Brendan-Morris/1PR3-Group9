@@ -27,5 +27,3 @@ public:
 
 	void virtual Display();
 };
-//test
-//rayyan mukhi
