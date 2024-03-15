@@ -1,6 +1,6 @@
 #include "Worker.h"
 #include <iostream>
-#include <iostream>
+
 using namespace std;
 
 Worker::Worker() {
@@ -20,5 +20,3 @@ Worker::Worker(string FirstName, string LastName, string WorkerNumber, double Ho
 	m_WorkerNumber = WorkerNumber;
 	m_HourlyPay = HourlyPay;
 }
-
-//rAYYAN mukhi
