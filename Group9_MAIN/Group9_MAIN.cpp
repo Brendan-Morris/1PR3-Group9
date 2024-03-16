@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 #include "Worker.h"
 #include "Manager.h"
@@ -27,25 +28,18 @@ void LoginPage(int size) {
 	// If no employee is found, the option to enter a password won't come and the program will give an error
 }
 
-int main() {
-
+void BootupPage(int size) {
 	string tmp_FirstName;
 	string tmp_LastName;
 	string tmp_WorkerNumber;
 	string tmp_WorkerPassword;
+	string tmp_WorkerPasswordChecker;
 	double tmp_Pay;
 	string tmp_Position;
 
-	const int size = 10000;
-	int StartEmployees;
+	int* EmployeeArray = new int[size];
 
-	cout << "Booting up...." << endl;
-	cout << "How many employees are in the system?";
-	cin >> StartEmployees;
-
-	int EmployeeArray[size]; //10000 spots available, but only the first few sections of the array will be filled, determined by the StartEmployees variable
-
-	for (int i = 0; i < StartEmployees; i++) { //Create every employee in the program through the array
+	for (int i = 0; i < size; i++) {
 
 		cout << "------Enter employee " << (i + 1) << "Information-----" << endl;
 		cout << "First Name: "; cin >> tmp_FirstName;
@@ -58,17 +52,52 @@ int main() {
 		//Each one must pass the following in this order: string password, string FirstName, string LastName, string WorkerNumber, double HourlyPay
 
 		if (tmp_Position == "Manager") {
-			
+			cout << "Please enter the password you would like to use for the account for: " << tmp_FirstName << " " << tmp_LastName << ":"; cin >> tmp_WorkerPassword;
+			cout << "Please confirm your password: "; cin >> tmp_WorkerPasswordChecker;
+
+			while (tmp_WorkerPassword != tmp_WorkerPasswordChecker) {
+				cout << "ERROR: Passwords do not match. Please enter your password: "; cin >> tmp_WorkerPassword;
+				cout << "Please confirm your password: "; cin >> tmp_WorkerPasswordChecker;
+			}
+
+			Manager EmployeeArray[i](tmp_WorkerPassword, tmp_FirstName, tmp_LastName, tmp_WorkerNumber, tmp_Pay);
+
 		}
 
 		if (tmp_Position == "Supervisor") {
+			cout << "Please enter the password you would like to use for the account for: " << tmp_FirstName << " " << tmp_LastName << ":"; cin >> tmp_WorkerPassword;
+			cout << "Please confirm your password: "; cin >> tmp_WorkerPasswordChecker;
 
+			while (tmp_WorkerPassword != tmp_WorkerPasswordChecker) {
+				cout << "ERROR: Passwords do not match. Please enter your password: "; cin >> tmp_WorkerPassword;
+				cout << "Please confirm your password: "; cin >> tmp_WorkerPasswordChecker;
+			}
+
+			Supervisor EmployeeArray[i](tmp_WorkerPassword, tmp_FirstName, tmp_LastName, tmp_WorkerNumber, tmp_Pay);
 		}
 
 		if (tmp_Position == "Employee") {
+			cout << "Please enter the password you would like to use for the account for: " << tmp_FirstName << " " << tmp_LastName << ":"; cin >> tmp_WorkerPassword;
+			cout << "Please confirm your password: "; cin >> tmp_WorkerPasswordChecker;
 
+			while (tmp_WorkerPassword != tmp_WorkerPasswordChecker) {
+				cout << "ERROR: Passwords do not match. Please enter your password: "; cin >> tmp_WorkerPassword;
+				cout << "Please confirm your password: "; cin >> tmp_WorkerPasswordChecker;
+			}
+
+			Employee EmployeeArray[i](tmp_WorkerPassword, tmp_FirstName, tmp_LastName, tmp_WorkerNumber, tmp_Pay);
 		}
 	}
+}
+
+int main() {
+
+	const int size = 0;
+
+	cout << "Booting up...." << endl;
+	cout << "How many employees are in the system?"; cin >> size;
+
+	BootupPage(size); // Return the array that is created in this function to pass into LoginPage()
 
 	LoginPage(size); // Have to pass the DMA Array to the other function to check for login information
 }
