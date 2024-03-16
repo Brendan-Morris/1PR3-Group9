@@ -19,13 +19,12 @@ void LoginPage(int size) {
 	cout << "Please enter your LAST name: ";
 	cin >> tmp_LastName;
 
-	cout << "Please enter your employee number: ";
+	cout << "Please enter your EMPLOYEE NUMBER: ";
 	cin >> tmp_EmployeeNumber;
 
 	// Using these to find the employee's information in the array
-	// Making the password come after the program finds the employee
+	// The password screen comes after the program finds the employee in the system
 	// If no employee is found, the option to enter a password won't come and the program will give an error
-
 }
 
 int main() {
@@ -37,15 +36,16 @@ int main() {
 	double tmp_Pay;
 	string tmp_Position;
 
-	int size = 0;
+	const int size = 10000;
+	int StartEmployees;
 
 	cout << "Booting up...." << endl;
 	cout << "How many employees are in the system?";
-	cin >> size;
+	cin >> StartEmployees;
 
-	int* EmployeeArray = new int[size];
+	int EmployeeArray[size]; //10000 spots available, but only the first few sections of the array will be filled, determined by the StartEmployees variable
 
-	for (int i = 0; i < size; i++) { //Create every employee in the program through the array
+	for (int i = 0; i < StartEmployees; i++) { //Create every employee in the program through the array
 
 		cout << "------Enter employee " << (i + 1) << "Information-----" << endl;
 		cout << "First Name: "; cin >> tmp_FirstName;
@@ -58,7 +58,7 @@ int main() {
 		//Each one must pass the following in this order: string password, string FirstName, string LastName, string WorkerNumber, double HourlyPay
 
 		if (tmp_Position == "Manager") {
-
+			
 		}
 
 		if (tmp_Position == "Supervisor") {
