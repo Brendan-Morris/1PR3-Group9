@@ -70,5 +70,5 @@ int main() {
 		}
 	}
 
-	LoginPage(size);
+	LoginPage(size); // Have to pass the DMA Array to the other function to check for login information
 }
