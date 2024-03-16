@@ -12,7 +12,7 @@ private:
 public:
 	Employee();
 	~Employee();
-	Employee(string EmpPass);
+	Employee(string EmpPass, string FirstName, string LastName, string WorkerNumber, double HourlyPay);
 
 	void SetEmployeePassword(string EP) { m_EmployeePassword = EP; };
 

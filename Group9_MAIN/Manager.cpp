@@ -12,7 +12,7 @@ Manager::~Manager() {
 
 }
 
-Manager::Manager(string ManPass) {
+Manager::Manager(string ManPass, string FirstName, string LastName, string WorkerNumber, double HourlyPay) : Worker(FirstName, LastName, WorkerNumber, HourlyPay) {
 	m_ManagerPassword = ManPass;
 }
 

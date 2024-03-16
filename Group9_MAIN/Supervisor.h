@@ -12,7 +12,7 @@ private:
 public:
 	Supervisor();
 	~Supervisor();
-	Supervisor(string SupPass);
+	Supervisor(string SupPass, string FirstName, string LastName, string WorkerNumber, double HourlyPay);
 
 	void SetSupervisorPassword(string SP) { m_SupervisorPassword = SP; };
 

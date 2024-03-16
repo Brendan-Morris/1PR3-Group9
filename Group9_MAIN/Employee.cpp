@@ -12,7 +12,7 @@ Employee::~Employee() {
 
 }
 
-Employee::Employee(string EmpPass) {
+Employee::Employee(string EmpPass, string FirstName, string LastName, string WorkerNumber, double HourlyPay) : Worker(FirstName, LastName, WorkerNumber, HourlyPay) {
 	m_EmployeePassword = EmpPass;
 }
 
