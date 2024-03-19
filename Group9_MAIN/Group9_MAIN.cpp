@@ -28,7 +28,10 @@ void LoginPage(int size) {
 	// If no employee is found, the option to enter a password won't come and the program will give an error
 }
 
-void BootupPage(int size) {
+void BootupPage(int size) { // This function is only to fill the array of objects, it must return that array, everything else is not important
+
+	// Each tmp variable is used in the for loop to create each object, then overridden every loop
+
 	string tmp_FirstName;
 	string tmp_LastName;
 	string tmp_WorkerNumber;
@@ -49,7 +52,11 @@ void BootupPage(int size) {
 		cout << "Position (Manager, Supervisor, Employee): "; cin >> tmp_Position;
 
 		//Each if statement will create an object for the respective class
-		//Each one must pass the following in this order: string password, string FirstName, string LastName, string WorkerNumber, double HourlyPay
+		// Password creator comes after the position is determined
+	
+		// All three of these if statements are the same, just used to create each of the different positions
+		
+		// Each constructor must pass the following in this order: string password, string FirstName, string LastName, string WorkerNumber, double HourlyPay
 
 		if (tmp_Position == "Manager") {
 			cout << "Please enter the password you would like to use for the account for: " << tmp_FirstName << " " << tmp_LastName << ":"; cin >> tmp_WorkerPassword;
@@ -92,12 +99,15 @@ void BootupPage(int size) {
 
 int main() {
 
-	const int size = 0;
+	int size = 0;
 
 	cout << "Booting up...." << endl;
 	cout << "How many employees are in the system?"; cin >> size;
 
 	BootupPage(size); // Return the array that is created in this function to pass into LoginPage()
 
-	LoginPage(size); // Have to pass the DMA Array to the other function to check for login information
+	LoginPage(size); // Have to also pass the DMA array that was returned from BootupPage() to check for login information
 }
+
+
+
