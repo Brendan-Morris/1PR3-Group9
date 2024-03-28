@@ -17,7 +17,5 @@ public:
 	void SetEmployeePassword(string EP) { m_EmployeePassword = EP; };
 
 	string GetEmployeePassword() { return m_EmployeePassword; };
-
-	void Display();
 };
 

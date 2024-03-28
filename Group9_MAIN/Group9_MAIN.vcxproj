@@ -129,12 +129,14 @@
   <ItemGroup>
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="Group9_MAIN.cpp" />
+    <ClCompile Include="Management.cpp" />
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="Supervisor.cpp" />
     <ClCompile Include="Worker.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Employee.h" />
+    <ClInclude Include="Management.h" />
     <ClInclude Include="Manager.h" />
     <ClInclude Include="Supervisor.h" />
     <ClInclude Include="Worker.h" />
