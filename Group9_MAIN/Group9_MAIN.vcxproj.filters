@@ -33,6 +33,12 @@
     <ClCompile Include="Management.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="WorkerPerformanceReview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Intern.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Worker.h">
@@ -48,6 +54,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Management.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkerPerformanceReview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Intern.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

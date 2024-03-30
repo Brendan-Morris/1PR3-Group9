@@ -129,17 +129,21 @@
   <ItemGroup>
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="Group9_MAIN.cpp" />
+    <ClCompile Include="Intern.cpp" />
     <ClCompile Include="Management.cpp" />
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="Supervisor.cpp" />
     <ClCompile Include="Worker.cpp" />
+    <ClCompile Include="WorkerPerformanceReview.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Employee.h" />
+    <ClInclude Include="Intern.h" />
     <ClInclude Include="Management.h" />
     <ClInclude Include="Manager.h" />
     <ClInclude Include="Supervisor.h" />
     <ClInclude Include="Worker.h" />
+    <ClInclude Include="WorkerPerformanceReview.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
