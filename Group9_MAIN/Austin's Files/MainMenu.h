@@ -1,6 +1,9 @@
 #pragma once 
+#include "EmployeeMenu.h"
 #include <iostream>
-class MainMenu {
+using namespace std;
+
+class MainMenu : public EmployeeMenu, public ManagmentMenu {
 public:
 	void displayManagmentView();
 	void displayDefaultView();
