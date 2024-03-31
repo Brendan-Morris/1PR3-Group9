@@ -28,8 +28,10 @@ int main() {
 			break;
 		case 2:
 			menu.displayManagmentView();
+			break;
 		case 3:
 			return 0;
+			break;
 		}
 	}
 
@@ -57,12 +59,14 @@ void MainMenu::displayDefaultView() {
 
 		switch (selection) {
 		case 1:
-			menu.displayDefaultView();
+			menu.InternSubMenu();
 			break;
 		case 2:
-			menu.displayManagmentView();
+			menu.EmployeeSubMenu();
+			break;
 		case 3:
-			menu.
+			menu.SupervisorSubMenu();
+			break;
 		}
 	}
 }
@@ -74,16 +78,41 @@ void MainMenu::displayManagmentView() {
 	cout << "2) Edit Data" << endl;
 	cout << "3) Close Program " << endl;
 	cout << "Selection: ";
+	ManagmentMenu Mmenu;
+	int selection = 0;
+	for (int i = 0; i < 1;) {
+		cin >> selection;
+		if (selection > 0 && selection < 4) {
+			i++;
+		}
+		else {
+			cout << "Invalid Entry" << endl << "Selection: ";
+		}
+	}
+	if (selection <= 4) {
+
+		switch (selection) {
+		case 1:
+			Mmenu.ViewDataManagment();
+			break;
+		case 2:
+			Mmenu.EditDataManagment();
+			break;
+		case 3:
+			Mmenu.CloseManagment();
+			break;
+		}
+	}
 }
 
 void MainMenu::InternSubMenu() {
 	cout << "-----Intern Menu-----" << endl;
 	cout << "1) Account Info" << endl;
 	cout << "2) Enter Hours" << endl;
-	cout << "3) View Paycheck"
+	cout << "3) View Paycheck" << endl;
 }
 
-void MainMenu::EmployeesubMenu() {
+void MainMenu::EmployeeSubMenu() {
 	cout << "-----Employee Menu-----" << endl;
 }
 

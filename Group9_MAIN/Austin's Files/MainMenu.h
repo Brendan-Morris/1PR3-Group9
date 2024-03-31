@@ -1,13 +1,14 @@
 #pragma once 
 #include "EmployeeMenu.h"
+#include "ManagmentMenu.h"
 #include <iostream>
 using namespace std;
 
-class MainMenu : public EmployeeMenu, public ManagmentMenu {
+class MainMenu : public EmployeeMenu, ManagmentMenu {
 public:
 	void displayManagmentView();
 	void displayDefaultView();
 	void InternSubMenu();
-	void EmployeesubMenu();
+	void EmployeeSubMenu();
 	void SupervisorSubMenu();
 };
