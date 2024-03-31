@@ -17,8 +17,5 @@ public:
 	void SetManagerPassword(string MP) { m_ManagerPassword = MP; };
 
 	string GetManagerPassword() { return m_ManagerPassword; };
-
-	void Display();
-
 };
 

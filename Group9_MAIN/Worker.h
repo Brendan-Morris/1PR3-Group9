@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "Departments.h"
 using namespace std;
 
 class Worker
@@ -11,6 +12,7 @@ protected:
 	string m_WorkerNumber;
 	double m_HourlyPay;
 	double m_Hours[365];
+	Departments m_Department;
 public:
 	Worker();
 	~Worker();
@@ -27,6 +29,4 @@ public:
 	void SetWorkerNumber(string WN) { m_WorkerNumber = WN; };
 	void SetHourlyPay(double HP) { m_HourlyPay = HP; };
 	void SetHoursWorked(double Hours, const int i) { m_Hours[i] = Hours; };
-
-	void virtual Display();
 };

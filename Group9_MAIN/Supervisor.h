@@ -17,7 +17,5 @@ public:
 	void SetSupervisorPassword(string SP) { m_SupervisorPassword = SP; };
 
 	string GetSupervisorPassword() { return m_SupervisorPassword; };
-
-	void Display();
 };
 

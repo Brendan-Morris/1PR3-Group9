@@ -16,8 +16,3 @@ Employee::Employee(string EmpPass, string FirstName, string LastName, string Wor
 	m_EmployeePassword = EmpPass;
 }
 
-void Employee::Display() {
-	cout << "Successfully signed into EMPLOYEE account" << endl; 
-	cout << "NAME: " << Worker::GetFirstName() << " " << Worker::GetLastName() << endl;
-	cout << "EMPLOYEE NUMBER: " << Worker::GetWorkerNumber() << endl;
-}
