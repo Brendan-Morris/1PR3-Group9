@@ -3,7 +3,7 @@
 using namespace std;
 
 //This is what you will be presented with when the program starts
-int main() {
+MainMenu::MainMenu() {
 	MainMenu menu;
 	int selection = 0;
 	cout << "-----Employee Managment Software-----" << endl;
@@ -30,7 +30,7 @@ int main() {
 			menu.displayManagmentView();
 			break;
 		case 3:
-			return 0;
+			cout << "-----Task Ended-----" << endl;
 			break;
 		}
 	}
@@ -55,7 +55,7 @@ void MainMenu::displayDefaultView() {
 			cout << "Invalid Entry" << endl << "Selection: ";
 		}
 	}
-	if (selection <= 4) {
+	if (selection <= 3) {
 
 		switch (selection) {
 		case 1:
@@ -89,7 +89,7 @@ void MainMenu::displayManagmentView() {
 			cout << "Invalid Entry" << endl << "Selection: ";
 		}
 	}
-	if (selection <= 4) {
+	if (selection <= 3) {
 
 		switch (selection) {
 		case 1:
@@ -105,20 +105,6 @@ void MainMenu::displayManagmentView() {
 	}
 }
 
-void MainMenu::InternSubMenu() {
-	cout << "-----Intern Menu-----" << endl;
-	cout << "1) Account Info" << endl;
-	cout << "2) Enter Hours" << endl;
-	cout << "3) View Paycheck" << endl;
-}
 
-void MainMenu::EmployeeSubMenu() {
-	cout << "-----Employee Menu-----" << endl;
-}
-
-void MainMenu::SupervisorSubMenu() {
-	cout << "-----Supervisor Menu-----" << endl;
-	cout << "1) View " << endl;
-}
 
 
