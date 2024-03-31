@@ -7,7 +7,5 @@ using namespace std;
 class MainMenu : public DefaultMenu, ManagmentMenu {
 public:
 	MainMenu();
-	void displayManagmentView();
 	void displayDefaultView();
-	
 };

@@ -5,5 +5,5 @@ public:
 	void InternSubMenu();
 	void EmployeeSubMenu();
 	void SupervisorSubMenu();
-
+	void ViewEditProjects();
 };

@@ -43,67 +43,37 @@ void MainMenu::displayDefaultView() {
 	cout << "1)Intern" << endl;
 	cout << "2)Employee" << endl;
 	cout << "3)Supervisor" << endl;
+	cout << "4) Return" << endl;
 	cout << "Selection: " << endl;
-	MainMenu menu;
+	MainMenu Dmenu;
 	int selection = 0;
 	for (int i = 0; i < 1;) {
 		cin >> selection;
-		if (selection > 0 && selection < 4) {
+		if (selection > 0 && selection < 5) {
 			i++;
 		}
 		else {
 			cout << "Invalid Entry" << endl << "Selection: ";
 		}
 	}
-	if (selection <= 3) {
+	if (selection <= 4) {
 
 		switch (selection) {
 		case 1:
-			menu.InternSubMenu();
+			Dmenu.InternSubMenu();
 			break;
 		case 2:
-			menu.EmployeeSubMenu();
+			Dmenu.EmployeeSubMenu();
 			break;
 		case 3:
-			menu.SupervisorSubMenu();
+			Dmenu.SupervisorSubMenu();
 			break;
+		case 4:
+			MainMenu();
 		}
 	}
 }
 
-//This menu houses the different options managment has "1) View data" will have sub menus so they can sleect which data to view
-void MainMenu::displayManagmentView() {
-	cout << "-----Managment Menu-----" << endl;
-	cout << "1) View Data" << endl;
-	cout << "2) Edit Data" << endl;
-	cout << "3) Close Program " << endl;
-	cout << "Selection: ";
-	ManagmentMenu Mmenu;
-	int selection = 0;
-	for (int i = 0; i < 1;) {
-		cin >> selection;
-		if (selection > 0 && selection < 4) {
-			i++;
-		}
-		else {
-			cout << "Invalid Entry" << endl << "Selection: ";
-		}
-	}
-	if (selection <= 3) {
-
-		switch (selection) {
-		case 1:
-			Mmenu.ViewDataManagment();
-			break;
-		case 2:
-			Mmenu.EditDataManagment();
-			break;
-		case 3:
-			Mmenu.CloseManagment();
-			break;
-		}
-	}
-}
 
 
 
