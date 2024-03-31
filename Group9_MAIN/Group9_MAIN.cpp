@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 
 #include "Worker.h"
 #include "Manager.h"
@@ -77,7 +78,7 @@ void BootupPage(int size) { // This function is only to fill the array of object
 
 			while (tmp_WorkerPassword != tmp_WorkerPasswordChecker) {
 				cout << "ERROR: Passwords do not match. Please enter your password: "; cin >> tmp_WorkerPassword;
-				cout << "Please confirm your password: "; cin >> tmp_WorkerPasswordChecker;
+			a	cout << "Please confirm your password: "; cin >> tmp_WorkerPasswordChecker;
 			}
 
 			Supervisor EmployeeArray[i](tmp_WorkerPassword, tmp_FirstName, tmp_LastName, tmp_WorkerNumber, tmp_Pay);
@@ -96,18 +97,5 @@ void BootupPage(int size) { // This function is only to fill the array of object
 		}
 	}
 }
-
-int main() {
-
-	int size = 0;
-
-	cout << "Booting up...." << endl;
-	cout << "How many employees are in the system?"; cin >> size;
-
-	BootupPage(size); // Return the array that is created in this function to pass into LoginPage()
-
-	LoginPage(size); // Have to also pass the DMA array that was returned from BootupPage() to check for login information
-}
-
 
 
