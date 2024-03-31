@@ -15,21 +15,6 @@ Departments::~Departments()
 	delete[] m_Projects;
 }
 
-string Departments::GetName() const
-{
-	return m_DepName;
-}
-
-Projects* Departments::GetProject() const
-{
-	return m_Projects;
-}
-
-int Departments::GetNumProjects() const
-{
-	return m_NumProjects;
-}
-
 //Function for adding a project to a department
 void Departments::AddProject(const Projects& project)
 {
@@ -50,4 +35,48 @@ void Departments::AddProject(const Projects& project)
 
 	//Updates projects pointer to point to the new array
 	m_Projects = newProjects;
+}
+
+void Departments::AddWorker(const Worker& worker)
+{
+	//Creates new array with space for one more worker
+	Worker* newWorkers = new Worker[m_NumWorkers + 1];
+	for (int i = 0; i < m_NumWorkers; i++) //Copies existing workers to new array
+	{
+		newWorkers[i] = m_Workers[i];
+	}
+	newWorkers[m_NumWorkers++] = worker; //Adds the new worker
+	delete[] m_Workers; //Deletes old workers array
+	m_Workers = newWorkers; //Updates worker pointer to point to the new array
+}
+
+void Departments::RemoveWorker(const string& workerName)
+{
+	int indexToRemove = -1;
+	//Finds the index of the worker to remove
+	for (int i = 0; i < m_NumWorkers; i++)
+	{
+		string name = m_Workers[i].GetFirstName() + " " + m_Workers[i].GetLastName(); //Created name using Worker.h methods to compare to workerName
+		if (name == workerName)
+		{
+			indexToRemove = i;
+			break;
+		}
+	}
+	//If worker found, removes worker from array
+	if (indexToRemove != -1)
+	{
+		Worker* newWorkers = new Worker[m_NumWorkers - 1];
+		int j = 0;
+		for (int i = 0; i < m_NumWorkers; i++)
+		{
+			if (i != indexToRemove)
+			{
+				newWorkers[j++] = m_Workers[i];
+			}
+		}
+		delete[] m_Workers;
+		m_Workers = newWorkers;
+		m_NumWorkers--;
+	}
 }
