@@ -6,6 +6,8 @@
 #include "Manager.h"
 #include "Supervisor.h"
 #include "Employee.h"
+#include "report_generator.h"
+#include "companydata.h"
 
 using namespace std;
 
@@ -59,6 +61,14 @@ void BootupPage(int size) { // This function is only to fill the array of object
 		
 		// Each constructor must pass the following in this order: string password, string FirstName, string LastName, string WorkerNumber, double HourlyPay
 
+		Manager* somemanager = findManagerInArray(/* ... */);//###########################################important
+
+		if (somemanager != nullptr) {
+			CompanyData loadedData = loadCompanyData("company_data.txt"); // Load from file
+			somemanager->setCompanyData(loadedData);
+		}
+
+
 		if (tmp_Position == "Manager") {
 			cout << "Please enter the password you would like to use for the account for: " << tmp_FirstName << " " << tmp_LastName << ":"; cin >> tmp_WorkerPassword;
 			cout << "Please confirm your password: "; cin >> tmp_WorkerPasswordChecker;
@@ -98,4 +108,70 @@ void BootupPage(int size) { // This function is only to fill the array of object
 	}
 }
 
+int main() {
+
+	int choice;
+	bool running = true;
+
+	while (running) {
+		cout << "\nMenu:\n";
+		cout << "1. Generate Employee Report\n";
+		// Add other options as needed ...
+		cout << "0. Exit\n";
+		cout << "Enter your choice: ";
+		cin >> choice;
+
+		switch (choice) {
+		case 3: { // Save Company Data Option
+			Manager* foundManager = findManagerInArray(/* ... */);
+
+			if (foundManager != nullptr && foundManager->isLoggedIn) {
+				foundManager->saveCompanyDataToDisk();
+				cout << "Company data saved successfully!\n";
+			}
+			else {
+				cout << "Error: You must be logged in as a manager to save data.\n";
+			}
+			break;
+		}
+
+		case 2: { // option 2 is Company Overview
+			// Authentication check
+			string enteredPassword;
+			cout << "Enter Manager Password: ";
+			cin >> enteredPassword;
+
+			if (foundManager.GetManagerPassword() == enteredPassword) {
+				foundManager.displayCompanyOverview();
+			}
+			else {
+				cout << "Incorrect password. Access denied.\n";
+			}
+			break;
+		}
+		case 1: {
+			string employeeNumber;
+			cout << "Enter employee number: ";
+			cin >> employeeNumber;
+
+			// Search employees for matching employee number 
+			// ... (need to implement this search logic)
+
+			if (employeeFound) {
+				generateReport(foundEmployee, "employee_report.txt");
+			}
+			else {
+				cout << "Employee not found.\n";
+			}
+			break;
+		}
+			  // ... other cases ...
+		case 0:
+			running = false;
+			break;
+		default:
+			cout << "Invalid choice.\n";
+		}
+	}
+}
 
