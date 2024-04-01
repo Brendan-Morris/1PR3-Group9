@@ -27,6 +27,7 @@ MainMenu::MainMenu() {
 			menu.displayDefaultView();
 			break;
 		case 2:
+			menu.getlogin 
 			menu.displayManagmentView();
 			break;
 		case 3:
@@ -72,8 +73,7 @@ void MainMenu::displayDefaultView() {
 			MainMenu();
 		}
 	}
-	//test
-}
+	
 
 
 

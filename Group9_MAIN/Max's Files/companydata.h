@@ -11,5 +11,5 @@ struct CompanyData {
     // Potentially add more fields:
     double profit;
     int numEmployees;
-    // ...
+    // 
 };

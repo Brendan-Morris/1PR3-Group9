@@ -27,7 +27,8 @@ public:
 	void SetProfitMargin(double profMarg) {m_profitMargin = profMarg; };
 	void SetCOGS(double cogs) {m_COGS = cogs; };
 
-	void PrintSalesSummary(); //Prints Sales Summary, a neatly outputted list that contains Sales private variables, projects assigned to the Sales department, and workers currently working in the Sales Department
+	void PrintSalesSummaryManagement(); //Prints Sales Summary for Management, a neatly outputted list that contains Sales private variables, projects assigned to the Sales department, and workers currently working in the Sales Department. This will be used by Managers and Supervisors
+	void PrintSalesProjectSummary(); //Prints all Project names and descriptions inside Sales department. This will be used by Interns and Employees
 	void EditSalesSummary(); //Prompts the user to edit one Sales private variable using a menu.
 
 	//ASK AUSTIN IF FUNCTIONS FOR ADDING AND REMOVING SALES EMPLOYEES SHOULD BE MADE HERE

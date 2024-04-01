@@ -1,5 +1,7 @@
 #include "Projects.h"
 #include <iostream>
+#include <string>
+#include <limits>
 using namespace std;
 
 Projects::Projects(const string& name, const string& description)
@@ -55,4 +57,42 @@ void Projects::PrintProjectDetails()
 		}
 	}
 	cout << endl;
+}
+
+void Projects::EditProjectDetails()
+{
+	int option = -1; //Initialize option with invalid option
+
+	while (option != 0)
+	{
+		cout << "Edit Project Details" << endl;
+		cout << "-------------------------------------------" << endl;
+		cout << "1. Edit Project Name" << endl;
+		cout << "2. Edit Project Description" << endl;
+		cout << "Enter your option: ";
+		cin >> option;
+
+		cin.ignore(numeric_limits<streamsize>::max(), '\n'); //Clears input buffer
+
+		switch(option)
+		{
+			case 1:
+				cout << "Enter new project name: ";
+				getLine(cin, m_Name);
+				break;
+
+			case 2:
+				cout << "Enter new project description: ";
+				getLine(cin, m_Description);
+				break;
+
+			case 0:
+				cout << "Exiting edit mode." << endl;
+				break;
+				
+			default:
+				cout << "Invalid choice. Please try again." << endl;
+				break;
+		}
+	}
 }

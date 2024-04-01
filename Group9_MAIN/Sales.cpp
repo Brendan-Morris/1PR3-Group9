@@ -26,8 +26,8 @@ Sales::~Sales()
 
 }
 
-//Function to print Sales Summary
-void Sales::PrintSalesSummary()
+//Function to print Sales Summary that includes department 
+void Sales::PrintSalesSummaryManagement()
 {
 	//Print Sales Information
 	cout << "---------------------------------------------------------" << endl;
@@ -63,6 +63,12 @@ void Sales::PrintSalesSummary()
 		cout << endl;
 	}
 	cout << "---------------------------------------------------------" << endl;
+}
+
+//Function that displays projects in Sales Department
+void Sales::PrintSalesProjectSummary()
+{
+	
 }
 
 //Function to edit Sales Summary
