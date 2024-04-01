@@ -1,5 +1,6 @@
 #pragma once
 #include "Worker.h"
+#include "companydata.h"
 #include <string>
 #include <iostream>
 
@@ -9,6 +10,9 @@ class Manager : public Worker
 {
 private:
 	string m_ManagerPassword;
+	CompanyData companyData;
+	bool isLoggedIn;
+
 public:
 	Manager();
 	~Manager();
@@ -17,5 +21,20 @@ public:
 	void SetManagerPassword(string MP) { m_ManagerPassword = MP; };
 
 	string GetManagerPassword() { return m_ManagerPassword; };
+
+	void setCompanyData(CompanyData& data) { companyData = data; }
+	void displayCompanyOverview();
+
+	void saveCompanyDataToDisk(const string& filename = "2024_company_data.txt");
+
+	bool attemptLogin(const string& enteredPassword) {
+		if (enteredPassword == m_ManagerPassword) {
+			isLoggedIn = true;
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 };
 
