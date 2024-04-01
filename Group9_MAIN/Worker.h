@@ -28,3 +28,7 @@ public:
 	void SetHourlyPay(double HP) { m_HourlyPay = HP; };
 	void SetHoursWorked(double Hours, const int i) { m_Hours[i] = Hours; };
 };
+
+// Make the text file that has all the info
+// Find a way to put that into respective classes
+// Make the functions needed to read the respective information 

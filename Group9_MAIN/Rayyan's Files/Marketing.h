@@ -27,7 +27,7 @@ public:
 	void SetMarketResearchExpenditure(double marketRE) { m_marketResearchExpenditure = marketRE; };
 	void SetConversionRate(double convRate) { m_conversionRate = convRate; };
 
-	void PrintMarketingSummary(); //Prints Marketing Summary, a neatly outputted list that contains Marketing private variables, projects assigned to the Marketing department, and workers currently working in the Marketing Department
+	void PrintMarketingSummaryManagement(); //Prints Marketing Summary, a neatly outputted list that contains Marketing private variables, projects assigned to the Marketing department, and workers currently working in the Marketing Department
 	void EditMarketingSummary(); //Prompts the user to edit one Marketing private variable using a menu.
 
 	//ASK AUSTIN IF FUNCTIONS FOR ADDING AND REMOVING MARKETING EMPLOYEES SHOULD BE MADE HERE

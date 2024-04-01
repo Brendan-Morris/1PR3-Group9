@@ -37,6 +37,37 @@ void Departments::AddProject(const Projects& project)
 	m_Projects = newProjects;
 }
 
+//Function for removing a project to a department
+void Departments::RemoveProject(const string& projectName)
+{
+	int indexToRemove = -1;
+	//Find index of project to remove
+	for (int i = 0; i < m_NumProjects; i++)
+	{
+		if (m_Projects[i].GetProjectName() == projectName)
+		{
+			indexToRemove = i;
+			break;
+		}
+	}
+	//If project found, remove project from array
+	if (indexToRemove != 1)
+	{
+		Projects* newProjects = new Projects[m_NumProjects - i];
+		int j = 0;
+		for (int i = 0; i < m_NumProjects; i++)
+        {
+            if (i != indexToRemove)
+            {
+                newProjects[j++] = m_Projects[i];
+            }
+        }
+        delete[] m_Projects;
+        m_Projects = newProjects;
+        m_NumProjects--;
+	}
+}
+
 void Departments::AddWorker(const Worker& worker)
 {
 	//Creates new array with space for one more worker
