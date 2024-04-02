@@ -1,6 +1,7 @@
 #include "Manager.h"
 #include "Worker.h"
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -40,3 +41,22 @@ void Manager::saveCompanyDataToDisk(const string& filename) {
     saveCompanyData(companyData, filename);
 }
 
+void Manager::AddWorkers() {
+    fstream WorkerFile("Workers.txt", ios::app);
+    if (WorkerFile.is_open()) {
+        string EmployeeInformation;
+        int NumberofWorkers;
+        cout << "How many workers would you like to add?"; cin >> NumberofWorkers;
+        for (int i = 0; i < NumberofWorkers; i++) {
+            cout << "Please put in the workers information (in this order), seperated by a space with no commas." << endl;
+            cout << "First name, Last name, position, employee number" << endl;
+            getline(cin, EmployeeInformation);
+            WorkerFile << EmployeeInformation;
+        }
+    }
+
+    else
+        cout << "Could not open the file." << endl;
+    
+    WorkerFile.close();
+}

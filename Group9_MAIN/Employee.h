@@ -14,8 +14,6 @@ public:
 	~Employee();
 	Employee(string EmpPass, string FirstName, string LastName, string WorkerNumber, double HourlyPay);
 
-	void SetEmployeePassword(string EP) { m_EmployeePassword = EP; };
-
-	string GetEmployeePassword() { return m_EmployeePassword; };
+	void ProjectOptions();
 };
 

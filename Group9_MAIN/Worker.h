@@ -27,6 +27,10 @@ public:
 	void SetWorkerNumber(string WN) { m_WorkerNumber = WN; };
 	void SetHourlyPay(double HP) { m_HourlyPay = HP; };
 	void SetHoursWorked(double Hours, const int i) { m_Hours[i] = Hours; };
+
+	void virtual ProjectOptions();
+
+
 };
 
 // Make the text file that has all the info

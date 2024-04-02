@@ -36,5 +36,7 @@ public:
 			return false;
 		}
 	}
+
+	void AddWorkers();
 };
 

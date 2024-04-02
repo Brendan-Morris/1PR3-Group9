@@ -16,3 +16,6 @@ Employee::Employee(string EmpPass, string FirstName, string LastName, string Wor
 	m_EmployeePassword = EmpPass;
 }
 
+void Employee::ProjectOptions() {
+	
+}

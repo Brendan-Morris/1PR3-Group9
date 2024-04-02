@@ -10,6 +10,11 @@ class Intern : public Worker
 private:
 	string m_InternPassword;
 public:
+	Intern();
+	~Intern();
+	Intern(string InternPass, string FirstName, string LastName, string WorkerNumber, double HourlyPay);
 
+
+	void ProjectOptions();
 };
 

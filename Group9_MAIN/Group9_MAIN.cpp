@@ -6,6 +6,7 @@
 #include "Manager.h"
 #include "Supervisor.h"
 #include "Employee.h"
+#include "Intern.h"
 #include "report_generator.h"
 #include "companydata.h"
 
@@ -106,6 +107,63 @@ void BootupPage(int size) { // This function is only to fill the array of object
 			Employee EmployeeArray[i](tmp_WorkerPassword, tmp_FirstName, tmp_LastName, tmp_WorkerNumber, tmp_Pay);
 		}
 	}
+}
+
+void CreateWorkerObjects() {
+	ifstream WorkerFile("Workers.txt");
+	// Temporary Variables to determine the number of workers in the file.
+	int LineCount = 0;
+	string Line;
+
+	string FirstName, LastName, Position, EmployeeNumber, Password, UniqueName;
+	double Pay; // This is set on position to make it easier to deal with, and also add consistency
+	
+	if (WorkerFile.is_open()) {
+		while (std::getline(WorkerFile, Line)) { // Count # of workers (Lines in Workers.txt)
+			LineCount++;
+		}
+
+		for (int i = 0; i < LineCount; i++) {
+			WorkerFile >> FirstName;
+			WorkerFile >> LastName;
+			WorkerFile >> Position;
+			WorkerFile >> EmployeeNumber;
+			WorkerFile >> Password;
+
+			UniqueName = FirstName + EmployeeNumber; // Hopefully creates objects named things like "James8F2IKA", which would allow us to have repeat first names. 
+
+			// Determine what object to make based on the position of the worker.
+			if (Position == "Manager") {
+				Pay = 30.00;
+				Manager UniqueName(Password, FirstName, LastName, EmployeeNumber, Pay);
+			}
+
+			else if (Position == "Supervisor") {
+				Pay = 23.00;
+				Supervisor UniqueName(Password, FirstName, LastName, EmployeeNumber, Pay);
+			}
+
+			else if (Position == "Employee") {
+				Pay = 20.00;
+				Employee UniqueName(Password, FirstName, LastName, EmployeeNumber, Pay);
+			}
+
+			else if (Position == "Intern") {
+				Pay = 18.00;
+				Intern UniqueName(Password, FirstName, LastName, EmployeeNumber, Pay);
+			}
+
+			else
+				cout << "Worker Creation Failed..." << endl;
+		}
+	}
+
+	else
+		cout << "Couldn't read from file" << endl;
+
+	WorkerFile.close();
+
+
 }
 
 int main() {
