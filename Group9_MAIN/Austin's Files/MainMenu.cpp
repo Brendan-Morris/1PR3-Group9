@@ -1,7 +1,8 @@
 #include <iostream>
 #include "MainMenu.h"
 using namespace std;
-
+ManagmentMenu Mmenu;
+MainMenu menu;
 //This is what you will be presented with when the program starts
 MainMenu::MainMenu() {
 	MainMenu menu;
@@ -27,8 +28,8 @@ MainMenu::MainMenu() {
 			menu.displayDefaultView();
 			break;
 		case 2:
-			menu.getlogin 
-			menu.displayManagmentView();
+		//	menu.getlogin 
+			//menu.displayManagmentView();
 			break;
 		case 3:
 			cout << "-----Task Ended-----" << endl;
@@ -44,7 +45,8 @@ void MainMenu::displayDefaultView() {
 	cout << "1)Intern" << endl;
 	cout << "2)Employee" << endl;
 	cout << "3)Supervisor" << endl;
-	cout << "4) Return" << endl;
+	cout << "4)Managment" << endl;
+	cout << "5)Return" << endl;
 	cout << "Selection: " << endl;
 	MainMenu Dmenu;
 	int selection = 0;
@@ -70,9 +72,11 @@ void MainMenu::displayDefaultView() {
 			Dmenu.SupervisorSubMenu();
 			break;
 		case 4:
+			Mmenu.
 			MainMenu();
 		}
 	}
+}
 	
 
 

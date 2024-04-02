@@ -16,7 +16,7 @@ void ManagmentMenu::displayManagmentView() {
 	cout << "2) Edit Data" << endl;
 	cout << "3) Return" << endl;
 	cout << "Selection: ";
-	
+
 	int selection = 0;
 	for (int i = 0; i < 1;) {
 		cin >> selection;
@@ -44,7 +44,7 @@ void ManagmentMenu::displayManagmentView() {
 }
 
 void ManagmentMenu::ViewDataManagment() {
-//view functions required here<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	//view functions required here<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 }
 
 void ManagmentMenu::EditDataManagment() {
