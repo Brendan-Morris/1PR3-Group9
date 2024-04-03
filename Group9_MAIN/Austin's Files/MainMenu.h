@@ -1,10 +1,13 @@
 #pragma once 
 #include "DefaultMenu.h"
 #include "ManagmentMenu.h"
+#include "EmployeeMenu.h"
+#include "InternMenu.h"
+#include "SupervisorMenu.h"
 #include <iostream>
 using namespace std;
 
-class MainMenu : public DefaultMenu, ManagmentMenu {
+class MainMenu : public ManagmentMenu, InternMenu, EmployeeMenu, SupervisorMenu {
 public:
 	MainMenu();
 	void displayDefaultView();

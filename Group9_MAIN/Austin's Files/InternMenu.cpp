@@ -5,12 +5,12 @@
 #include "SupervisorMenu.h"
 #include "MainMenu.h"
 using namespace std;
-ManagmentMenu Mmenu;
+InternMenu Mmenu;
 MainMenu Menu;
 
 
-void ManagmentMenu::ManagmentSubMenu() {
-	cout << "-----Managment Menu-----" << endl;
+void InternMenu::InternSubMenu() {
+	cout << "-----Intern Menu-----" << endl;
 	cout << "1) View Data" << endl;
 	cout << "2) Edit Data" << endl;
 	cout << "3) Return" << endl;
@@ -30,26 +30,26 @@ void ManagmentMenu::ManagmentSubMenu() {
 
 		switch (selection) {
 		case 1:
-			Mmenu.ViewDataManagment();
+			Mmenu.ViewDataIntern();
 			break;
 		case 2:
-			Mmenu.EditDataManagment();
+			Mmenu.EditDataIntern();
 			break;
 		case 3:
-			Mmenu.CloseManagment();
+			Mmenu.CloseIntern();
 			break;
 		}
 	}
 }
 
-void ManagmentMenu::ViewDataManagment() {
+void InternMenu::ViewDataIntern() {
 	//view functions required here<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 }
 
-void ManagmentMenu::EditDataManagment() {
+void InternMenu::EditDataIntern() {
 	//view functions required here<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 }
 
-void ManagmentMenu::CloseManagment() {
+void InternMenu::CloseIntern() {
 	Menu.displayDefaultView();
 }
