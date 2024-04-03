@@ -30,7 +30,9 @@ public:
 
 	void virtual ProjectOptions();
 
+	double PayCalculator(double m_Hours[], double PayRate);
 
+	void Attendance(double m_Hours[]);
 };
 
 // Make the text file that has all the info

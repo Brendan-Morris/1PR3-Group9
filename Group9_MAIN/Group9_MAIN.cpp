@@ -10,6 +10,7 @@
 #include "report_generator.h"
 #include "companydata.h"
 
+
 using namespace std;
 
 void LoginPage(int size) {
