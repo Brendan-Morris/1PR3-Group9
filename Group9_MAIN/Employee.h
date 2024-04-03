@@ -3,16 +3,14 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 class Employee : public Worker
 {
 private:
-	string m_EmployeePassword;
+	std::string m_EmployeePassword;
 public:
 	Employee();
 	~Employee();
-	Employee(string EmpPass, string FirstName, string LastName, string WorkerNumber, WorkerPerformanceReview* WorkerPerformanceReview);
+	Employee(std::string EmpPass, std::string FirstName, std::string LastName, std::string WorkerNumber, WorkerPerformanceReview* WorkerPerformanceReview);
 
 	void ProjectOptions();
 };

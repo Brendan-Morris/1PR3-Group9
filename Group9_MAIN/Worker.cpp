@@ -1,8 +1,6 @@
 #include "Worker.h"
 #include <iostream>
 
-using namespace std;
-
 Worker::Worker() {
 	m_FirstName = "";
 	m_LastName = "";
@@ -13,7 +11,7 @@ Worker::~Worker() {
 
 }
 
-Worker::Worker(string FirstName, string LastName, string WorkerNumber, WorkerPerformanceReview* WPerfRev) {
+Worker::Worker(std::string FirstName, std::string LastName, std::string WorkerNumber, WorkerPerformanceReview* WPerfRev) {
 	m_FirstName = FirstName;
 	m_LastName = LastName;
 	m_WorkerNumber = WorkerNumber;

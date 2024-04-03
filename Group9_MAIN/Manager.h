@@ -8,7 +8,7 @@ using namespace std;
 
 class Manager : public Worker
 {
-private:
+protected:
 	string m_ManagerPassword;
 	CompanyData companyData;
 	bool isLoggedIn;

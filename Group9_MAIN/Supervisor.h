@@ -3,16 +3,14 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
-
 class Supervisor : public Worker
 {
 private:
-	string m_SupervisorPassword;
+	std::string m_SupervisorPassword;
 public:
 	Supervisor();
 	~Supervisor();
-	Supervisor(string SupPass, string FirstName, string LastName, string WorkerNumber, WorkerPerformanceReview* WorkerPerformanceReview);
+	Supervisor(std::string SupPass, std::string FirstName, std::string LastName, std::string WorkerNumber, WorkerPerformanceReview* WorkerPerformanceReview);
 
 	void ProjectOptions();
 };

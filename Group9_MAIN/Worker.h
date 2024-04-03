@@ -6,22 +6,22 @@
 class Worker
 {
 protected:
-	string m_FirstName;
-	string m_LastName;
-	string m_WorkerNumber;
+	std::string m_FirstName;
+	std::string m_LastName;
+	std::string m_WorkerNumber;
 	WorkerPerformanceReview* worker_performance_review;
 public:
 	Worker();
 	~Worker();
-	Worker(string FirstName, string LastName, string WorkerNumber, WorkerPerformanceReview* WorkerPerformanceReview);
+	Worker(std::string FirstName, std::string LastName, std::string WorkerNumber, WorkerPerformanceReview* WorkerPerformanceReview);
 
-	string GetFirstName() { return m_FirstName; };
-	string GetLastName() { return m_LastName; };
-	string GetWorkerNumber() { return m_WorkerNumber; };
+	std::string GetFirstName() { return m_FirstName; };
+	std::string GetLastName() { return m_LastName; };
+	std::string GetWorkerNumber() { return m_WorkerNumber; };
 
-	void SetFirstName(string FN) { m_FirstName = FN; };
-	void SetLastName(string LN) { m_LastName = LN; };
-	void SetWorkerNumber(string WN) { m_WorkerNumber = WN; };
+	void SetFirstName(std::string FN) { m_FirstName = FN; };
+	void SetLastName(std::string LN) { m_LastName = LN; };
+	void SetWorkerNumber(std::string WN) { m_WorkerNumber = WN; };
 
 	void virtual ProjectOptions();
 };
