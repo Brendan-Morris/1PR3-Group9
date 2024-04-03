@@ -53,7 +53,7 @@ void Departments::RemoveProject(const string& projectName)
 	//If project found, remove project from array
 	if (indexToRemove != 1)
 	{
-		Projects* newProjects = new Projects[m_NumProjects - i];
+		Projects* newProjects = new Projects[m_NumProjects - 1];
 		int j = 0;
 		for (int i = 0; i < m_NumProjects; i++)
         {

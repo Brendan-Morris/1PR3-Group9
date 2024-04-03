@@ -27,7 +27,7 @@ Marketing::~Marketing()
 }
 
 //Function to print Marketing Summary
-void Marketing::PrintMarketingSummary()
+void Marketing::PrintMarketingSummaryManagement()
 {
 	//Print Marketing Information
 	cout << "---------------------------------------------------------" << endl;
@@ -61,6 +61,19 @@ void Marketing::PrintMarketingSummary()
 		}
 		cout << "Hours Worked: " << hours << endl;
 		cout << endl;
+	}
+	cout << "---------------------------------------------------------" << endl;
+}
+
+//Function that displays projects in Marketing Department
+void Marketing::PrintMarketingProjectSummary()
+{
+	cout << "---------------------------------------------------------" << endl;
+	//Print Projects currently assigned to Marketing Department
+	cout << GetDepName() << "DEPARTMENT PROJECTS:" << endl;
+	for (int i = 0; i < GetNumProjects(); i++)
+	{
+		GetProject()[i].PrintProjectDetails();
 	}
 	cout << "---------------------------------------------------------" << endl;
 }
