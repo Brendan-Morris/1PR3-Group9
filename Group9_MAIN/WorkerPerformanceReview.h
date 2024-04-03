@@ -12,6 +12,9 @@ public:
 	// No Getter or setter for hours because those are included in the attendance function
 
 	void SetSupervisorComment(std::string SPC) { m_SupervisorComment = SPC; };
+	void SetPayRate(double P) { m_PayRate = P; };
+
+	double GetPayRate() { return m_PayRate; };
 	std::string GetSupervisorComment() { return m_SupervisorComment; };
 
 	double PayCalculator(double m_Hours[], double PayRate);

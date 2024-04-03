@@ -5,7 +5,7 @@ using namespace std;
 
 Departments::Departments(const string& depName)
 {
-	depName = m_DepName;
+	m_DepName = depName;
 	m_Projects = nullptr;
 	m_NumProjects = 0;
 }
@@ -94,6 +94,7 @@ void Departments::RemoveWorker(const string& workerName)
 			break;
 		}
 	}
+
 	//If worker found, removes worker from array
 	if (indexToRemove != -1)
 	{
