@@ -1,7 +1,9 @@
 #include <iostream>
+#include <string>
 #include "MainMenu.h"
+#include "Credentials.h"
 using namespace std;
-
+EmployeeCredentials Cred;
 MainMenu menu;
 //This is what you will be presented with when the program starts
 MainMenu::MainMenu() {
@@ -55,10 +57,21 @@ void MainMenu::displayDefaultView() {
 		}
 	}
 	if (selection <= 5) {
-
+		string username;
+		string password;
 		switch (selection) {
 		case 1:
-			menu.InternSubMenu();
+			cout << "Username: ";
+			cin >> username;
+			cout << "Password: ";
+			cin >> password;
+			
+			if (attemptLogin(username, password, "intern")) {
+				menu.InternSubMenu();
+			}
+			else {
+				cout << "Login failed. Invalid username or password." << endl;
+			}
 			break;
 		case 2:
 			menu.EmployeeSubMenu();

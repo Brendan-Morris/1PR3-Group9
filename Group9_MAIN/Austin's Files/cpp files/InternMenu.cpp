@@ -4,15 +4,16 @@
 #include "InternMenu.h"
 #include "SupervisorMenu.h"
 #include "MainMenu.h"
+#include "Projects.h"
 using namespace std;
 InternMenu Mmenu;
 MainMenu Menu;
-
+Projects P;
 
 void InternMenu::InternSubMenu() {
 	cout << "-----Intern Menu-----" << endl;
-	cout << "1) View Data" << endl;
-	cout << "2) Edit Data" << endl;
+	cout << "1) View Projects" << endl;
+	cout << "2) View Payroll" << endl;
 	cout << "3) Return" << endl;
 	cout << "Selection: ";
 
@@ -30,11 +31,10 @@ void InternMenu::InternSubMenu() {
 
 		switch (selection) {
 		case 1:
-			Mmenu.ViewDataIntern();
+			Mmenu.ViewProjectsIntern();
 			break;
 		case 2:
-			Mmenu.EditDataIntern();
-			break;
+			
 		case 3:
 			Mmenu.CloseIntern();
 			break;
@@ -42,12 +42,12 @@ void InternMenu::InternSubMenu() {
 	}
 }
 
-void InternMenu::ViewDataIntern() {
-	//view functions required here<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+void InternMenu::ViewProjectsIntern() {
+	P.PrintProjectDetails();
 }
 
 void InternMenu::EditDataIntern() {
-	//view functions required here<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	
 }
 
 void InternMenu::CloseIntern() {

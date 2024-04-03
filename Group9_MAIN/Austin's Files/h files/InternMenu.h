@@ -2,7 +2,7 @@
 class InternMenu {
 public:
 	void InternSubMenu();
-	void ViewDataIntern();
+	void ViewProjectsIntern();
 	void EditDataIntern();
 	void CloseIntern();
 };
