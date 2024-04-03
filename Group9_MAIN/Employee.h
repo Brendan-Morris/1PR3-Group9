@@ -12,7 +12,7 @@ private:
 public:
 	Employee();
 	~Employee();
-	Employee(string EmpPass, string FirstName, string LastName, string WorkerNumber, double HourlyPay);
+	Employee(string EmpPass, string FirstName, string LastName, string WorkerNumber, WorkerPerformanceReview* WorkerPerformanceReview);
 
 	void ProjectOptions();
 };

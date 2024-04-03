@@ -12,8 +12,7 @@ private:
 public:
 	Intern();
 	~Intern();
-	Intern(string InternPass, string FirstName, string LastName, string WorkerNumber, double HourlyPay);
-
+	Intern(string InternPass, string FirstName, string LastName, string WorkerNumber, WorkerPerformanceReview* WorkerPerformanceReview);
 
 	void ProjectOptions();
 };

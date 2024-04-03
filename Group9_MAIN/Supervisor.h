@@ -12,7 +12,7 @@ private:
 public:
 	Supervisor();
 	~Supervisor();
-	Supervisor(string SupPass, string FirstName, string LastName, string WorkerNumber, double HourlyPay);
+	Supervisor(string SupPass, string FirstName, string LastName, string WorkerNumber, WorkerPerformanceReview* WorkerPerformanceReview);
 
 	void ProjectOptions();
 };

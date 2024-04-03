@@ -13,8 +13,11 @@ Manager::~Manager() {
 
 }
 
-Manager::Manager(string ManPass, string FirstName, string LastName, string WorkerNumber, double HourlyPay) : Worker(FirstName, LastName, WorkerNumber, HourlyPay) {
+Manager::Manager(string ManPass, string FirstName, string LastName, string WorkerNumber, WorkerPerformanceReview* WPerfRev) : Worker(FirstName, LastName, WorkerNumber, WPerfRev) {
 	m_ManagerPassword = ManPass;
+    m_FirstName = FirstName;
+    m_LastName = LastName;
+    m_WorkerNumber = WorkerNumber;
 }
 
 void Manager::displayCompanyOverview() {
