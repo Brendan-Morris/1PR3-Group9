@@ -1,1 +1,4 @@
-Steve Smith Management 4X6T36
+Steve Smith Management 4X6T36 SecurePassword
+Mary Garcia Supervisor 7FD29G ThisCantBeHacked
+David Hernandez Employee 98JHE4 TheBestPassword123
+James Johnson Intern 8F2IKA InternsArentPaidEnough

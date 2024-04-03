@@ -24,3 +24,4 @@ bool attemptLogin(const std::string& username, const std::string& password, cons
     }
     return false;
 }
+

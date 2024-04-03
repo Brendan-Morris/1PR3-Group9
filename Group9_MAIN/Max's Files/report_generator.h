@@ -1,11 +1,12 @@
 #pragma once
 #include "worker.h"
+#include  "WorkerPerformanceReview.h"
 #include "employee.h"
 #include "manager.h"
 #include <fstream>
 #include <supervisor.h>
 
-void generateReport(Worker& worker, string& filename) {
+void generateReport(Worker& worker, string& filename, WorkerPerformanceReview& WPerfRev) {
     ofstream reportFile(filename);
 
     if (reportFile.is_open()) {
@@ -26,7 +27,7 @@ void generateReport(Worker& worker, string& filename) {
             reportFile << "Employee" << endl;
         }
 
-        reportFile << "Hourly Pay: $" << worker.GetHourlyPay() << endl;
+        reportFile << "Hourly Pay: $" <<  WPerfRev.GetPayRate() << endl;
         reportFile.close();
 
         cout << "Report generated successfully: " << filename << endl;

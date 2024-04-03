@@ -1,32 +1,29 @@
 #pragma once
 #include <iostream>
 #include <string>
-using namespace std;
+#include "WorkerPerformanceReview.h"
 
 class Worker
 {
 protected:
-	string m_FirstName;
-	string m_LastName;
-	string m_WorkerNumber;
-	double m_HourlyPay;
-	double m_Hours[365];
+	std::string m_FirstName;
+	std::string m_LastName;
+	std::string m_WorkerNumber;
+	WorkerPerformanceReview* worker_performance_review;
 public:
 	Worker();
 	~Worker();
-	Worker(string FirstName, string LastName, string WorkerNumber, double HourlyPay);
+	Worker(std::string FirstName, std::string LastName, std::string WorkerNumber, WorkerPerformanceReview* WorkerPerformanceReview);
 
-	string GetFirstName() { return m_FirstName; };
-	string GetLastName() { return m_LastName; };
-	string GetWorkerNumber() { return m_WorkerNumber; };
-	double GetHourlyPay() { return m_HourlyPay; };
-	double GetHoursWorked(const int i) { return m_Hours[i]; };
+	std::string GetFirstName() { return m_FirstName; };
+	std::string GetLastName() { return m_LastName; };
+	std::string GetWorkerNumber() { return m_WorkerNumber; };
 
-	void SetFirstName(string FN) { m_FirstName = FN; };
-	void SetLastName(string LN) { m_LastName = LN; };
-	void SetWorkerNumber(string WN) { m_WorkerNumber = WN; };
-	void SetHourlyPay(double HP) { m_HourlyPay = HP; };
-	void SetHoursWorked(double Hours, const int i) { m_Hours[i] = Hours; };
+	void SetFirstName(std::string FN) { m_FirstName = FN; };
+	void SetLastName(std::string LN) { m_LastName = LN; };
+	void SetWorkerNumber(std::string WN) { m_WorkerNumber = WN; };
+
+	void virtual ProjectOptions();
 };
 
 // Make the text file that has all the info

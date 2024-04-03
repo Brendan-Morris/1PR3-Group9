@@ -8,7 +8,7 @@ using namespace std;
 
 class Manager : public Worker
 {
-private:
+protected:
 	string m_ManagerPassword;
 	CompanyData companyData;
 	bool isLoggedIn;
@@ -16,7 +16,7 @@ private:
 public:
 	Manager();
 	~Manager();
-	Manager(string ManPass, string FirstName, string LastName, string WorkerNumber, double HourlyPay);
+	Manager(string ManPass, string FirstName, string LastName, string WorkerNumber, WorkerPerformanceReview* WorkerPerformaceReview);
 
 	void SetManagerPassword(string MP) { m_ManagerPassword = MP; };
 
@@ -36,5 +36,7 @@ public:
 			return false;
 		}
 	}
+
+	void AddWorkers();
 };
 

@@ -1,22 +1,19 @@
 #include "Worker.h"
 #include <iostream>
 
-using namespace std;
-
 Worker::Worker() {
 	m_FirstName = "";
 	m_LastName = "";
 	m_WorkerNumber = "";
-	m_HourlyPay = 0.00;
 }
 
 Worker::~Worker() {
 
 }
 
-Worker::Worker(string FirstName, string LastName, string WorkerNumber, double HourlyPay) {
+Worker::Worker(std::string FirstName, std::string LastName, std::string WorkerNumber, WorkerPerformanceReview* WPerfRev) {
 	m_FirstName = FirstName;
 	m_LastName = LastName;
 	m_WorkerNumber = WorkerNumber;
-	m_HourlyPay = HourlyPay;
+	worker_performance_review = WPerfRev;
 }

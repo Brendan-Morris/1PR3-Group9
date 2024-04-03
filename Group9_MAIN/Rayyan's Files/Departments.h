@@ -1,6 +1,4 @@
 //Departments aggegrates Projects. Each Departments will have a project. Workers will later aggegrate Departments. Workers will HAVE A department.
-
-
 #pragma once
 #include <iostream>
 #include <string>
@@ -28,6 +26,7 @@ public:
 	int GetNumWorkers() const { return m_NumWorkers; };
 
 	void AddProject(const Projects& project); //Function for adding project
+	void RemoveProject(const string& projectName);
 	void AddWorker(const Worker& worker); //Function for adding worker to department
 	void RemoveWorker(const string& workerName); //Function for removing worker to department
 };

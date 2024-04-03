@@ -28,6 +28,7 @@ public:
 	void SetConversionRate(double convRate) { m_conversionRate = convRate; };
 
 	void PrintMarketingSummaryManagement(); //Prints Marketing Summary, a neatly outputted list that contains Marketing private variables, projects assigned to the Marketing department, and workers currently working in the Marketing Department
+	void PrintMarketingProjectSummary(); //Prints all Project names and descriptions inside Sales department. This will be used by Interns and Employees
 	void EditMarketingSummary(); //Prompts the user to edit one Marketing private variable using a menu.
 
 	//ASK AUSTIN IF FUNCTIONS FOR ADDING AND REMOVING MARKETING EMPLOYEES SHOULD BE MADE HERE

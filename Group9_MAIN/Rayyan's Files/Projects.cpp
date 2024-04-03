@@ -78,12 +78,12 @@ void Projects::EditProjectDetails()
 		{
 			case 1:
 				cout << "Enter new project name: ";
-				getLine(cin, m_Name);
+				getline(cin, m_Name);
 				break;
 
 			case 2:
 				cout << "Enter new project description: ";
-				getLine(cin, m_Description);
+				getline(cin, m_Description);
 				break;
 
 			case 0:
