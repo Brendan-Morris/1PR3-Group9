@@ -6,7 +6,7 @@ struct EmployeeCredentials {
     std::string password;
 };
 
-// Sample Credentials (Illustrative)
+// Sample Credentials
 const int MAX_INTERNS = 3;  // Define constants for array sizes
 EmployeeCredentials interns[MAX_INTERNS] = {
     { "intern1", "pass123" },
