@@ -34,7 +34,7 @@ void InternMenu::InternSubMenu() {
 			Mmenu.ViewProjectsIntern();
 			break;
 		case 2:
-			
+			Mmenu.PayrollDataIntern();
 		case 3:
 			Mmenu.CloseIntern();
 			break;
@@ -46,7 +46,7 @@ void InternMenu::ViewProjectsIntern() {
 	P.PrintProjectDetails();
 }
 
-void InternMenu::EditDataIntern() {
+void InternMenu::PayrollDataIntern() {
 	
 }
 

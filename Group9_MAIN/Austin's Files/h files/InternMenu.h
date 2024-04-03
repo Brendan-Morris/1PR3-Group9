@@ -3,6 +3,6 @@ class InternMenu {
 public:
 	void InternSubMenu();
 	void ViewProjectsIntern();
-	void EditDataIntern();
+	void PayrollDataIntern();
 	void CloseIntern();
 };
